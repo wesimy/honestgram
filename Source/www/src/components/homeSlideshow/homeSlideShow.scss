@@ -1,0 +1,15 @@
+@import '../../theme/_index.scss';
+.home-slide-show {
+    position: relative;
+    z-index: 1;
+    h1 {
+        color: $primary;
+        @include font-size($xxxxl-font);
+    }
+    h2{
+        @include font-size($xxxl-font);
+    }
+    p {
+        @include font-size($md-font);
+    }
+}

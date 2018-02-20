@@ -1,0 +1,6 @@
+@import '../../theme/_index.scss';
+
+.form-get-started{
+    //height: 50px;
+    @include transform(all,300ms,ease);
+}

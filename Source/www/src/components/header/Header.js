@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
      
-        <div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 100">
+        <div className="app-header" data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 100">
             <nav className="uk-navbar-container">
                 <div className="uk-container uk-container-expand">
                     <div data-uk-navbar>
