@@ -1,6 +1,25 @@
 @import '../../theme/_index.scss';
 
 .form-get-started{
-    //height: 50px;
-    @include transform(all,300ms,ease);
+    display: block;
+    
+    .uk-width-1-1{
+       max-width: 300px;
+    }
+    .uk-open{
+        .uk-accordion-tab{
+            &.uk-button{
+            background: none;
+            color: $text;
+            display: none;
+        }
+        }
+    }
+    .uk-accordion-content{
+        padding: 15px 15px 5px;
+       // padding-bottom: 5px;
+        background-color:white;
+        max-width: 300px;
+        margin: 0 auto;
+    }
 }

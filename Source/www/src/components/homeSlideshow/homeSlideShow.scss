@@ -2,14 +2,28 @@
 .home-slide-show {
     position: relative;
     z-index: 1;
-    h1 {
-        color: $primary;
-        @include font-size($xxxxl-font);
+    
+    // h2{
+    //     @include font-size($xxxl-font);
+    // }
+    
+    .home-intro{
+        h1 {
+            color: $primary;
+            @include font-size($xxxxl-font);
+        }
+        color:$text;
+        p {
+            @include font-size($md-font);
+        }
     }
-    h2{
-        @include font-size($xxxl-font);
+    .home-slide{
+        color:white;
+        overflow: hidden;
+
+        .home-slide-02{
+            .img-speach{width: 200px;}
+        }
     }
-    p {
-        @include font-size($md-font);
-    }
+
 }

@@ -1,0 +1,21 @@
+@import '../../theme/_index.scss';
+.uk-button-primary{
+    background-color:$primary;
+}
+.uk-button-secondary{
+    background-color:$secondary;
+    color:darken($secondary,30%);
+    &:hover,&:focus{
+        background-color:darken($secondary,10%);
+        color:darken($secondary,30%);
+    }
+}
+.uk-button-third{
+    background-color:$third;
+    color:white;
+    &:hover,&:focus{
+        background-color:darken($third,10%);
+        color:white;
+    }
+        
+}
