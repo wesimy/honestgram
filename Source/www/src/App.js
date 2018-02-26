@@ -1,7 +1,6 @@
 import 'uikit/dist/css/uikit.min.css';
 import './App.scss';
 
-//import Header from './components/header/Header';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import UIkit from 'uikit';
@@ -9,7 +8,12 @@ import Icons from 'uikit/dist/js/uikit-icons';
 // import store from './Store';
 import Header from './components/header/Header';
 import Home from './routes/home/Home';
-//import Dashboard from '../../';
+import Wall from './routes/wall/Wall';
+import Dashboard from './routes/dashboard/Dashboard';
+import Settings from './routes/settings/Settings';
+import Password from './routes/password/Password';
+import Login from './routes/login/Login';
+
 
 UIkit.use(Icons);
 class App extends Component {
@@ -17,11 +21,14 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        {/* <Header/> */}
+        <Header/>
         <div className="app-content">
-        
         <Route exact path="/" component={Home}/>
-        {/* <Route path="/Books" component={Dashboard}/> */}
+        <Route path="/Wall" component={Wall}/>
+        <Route path="/Dashboard" component={Dashboard}/>
+        <Route path="/Settings" component={Settings}/>
+        <Route path="/Password" component={Password}/>
+        <Route path="/Login" component={Login}/>
         {/* <Route path="/details/:article" component={Details}/> */}
       </div>
       </div>

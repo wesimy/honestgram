@@ -45,6 +45,21 @@ class HomeSlideShow extends Component {
                 }, 2000);
             }
         });
+        //document.querySelector('#home-slide-show').off('touchstart mousedown');    
+        // var handler = function(e) {
+        //     e.preventDefault();
+        // }
+        //console.log(UIkit.slideshow(document.querySelector('#home-slide-show'),{'pointer-events': false,drag: false}));
+        //console.log(document.querySelector('#home-slide-show'));
+        //document.querySelector('#home-slide-show').removeEventListener('pointerDown',handler,false);
+        //UIkit.slideshow().on('swipeRight');
+        
+        // UIkit.util.on('afterready.uk.dom', function() {    
+        //     function stopDrag() {    
+        
+        //     }    
+        //     setTimeout(stopDrag, 10);    
+        //   });   
         // typit
         //     new TypeIt('.type-it', {
         //         strings: ['a twat', 'a sweatheart', 'a bumm', 'a cool guy', 'an idiot', 'a dick'],
@@ -128,7 +143,7 @@ class HomeSlideShow extends Component {
     }
     render() {
         return (
-            <div id="home-slide-show" className="home-slide-show uk-position-relative uk-visible-toggle" data-uk-slideshow="animation: fade" onWheel={(e) => this.wheel(e)}>
+            <div id="home-slide-show" className="home-slide-show uk-position-relative uk-visible-toggle" data-uk-slideshow="animation: fade;finite: true" onWheel={(e) => this.wheel(e)}>
                 <ul className="uk-slideshow-items" data-uk-height-viewport>
                     <li className="home-intro" data-background="#f6f6f6">
                         <div className="uk-width-4-5@l uk-width-3-5@xl uk-position-center uk-position-small uk-text-center uk-transition-fade">
