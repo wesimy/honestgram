@@ -1,0 +1,62 @@
+@import '../../theme/_index.scss';
+.content-settings{
+    margin: 100px auto;
+    .uk-section:not(:last-child){
+        border-bottom: 1px dashed rgba($light-grey,0.5);
+        .uk-inline{
+            width: 100%;
+            input{
+                border:none;
+                &:focus{
+                    background: $lighter-grey;
+                }
+            }
+        }
+    }
+    
+}
+
+.uk-input-switch{
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 40px;
+        height: 22px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+    }
+    
+    label:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 100%;
+        transition: 0.3s cubic-bezier(.59,.01,.01,1.01);
+    }
+    
+    input:checked + label {
+        background: $third;
+    }
+    
+    input:checked + label:after {
+        left: calc(100% - 1px);
+        transform: translateX(-100%);
+    }
+    
+    label:active:after {
+        width: 20px;
+    }
+    
+}

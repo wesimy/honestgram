@@ -1,7 +1,31 @@
-.app-header{
+@import '../../theme/_index.scss';
+.app-header {
+    //border: 1px solid red;
     //position: relative;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    z-index: 10; //position: fixed;
+    //top: 0;
+    //width: 100%;
+    .uk-navbar-sticky {
+        background: white;
+        .uk-iconnav {
+            a {
+                color: black;
+            }
+        }
+    }
+    .brand {
+        margin: 30px;
+        h1 {
+            color: $primary;
+        }
+    }
+    .uk-iconnav {
+        margin: 30px;
+        a {
+            color: white;
+            &.active {
+                color: $third;
+            }
+        }
+    }
 }

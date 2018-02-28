@@ -27,7 +27,7 @@
     .uk-card-media-top{
         margin: 0 auto;
         img{
-            border-radius: 50%;
+            //border-radius: 50%;
             transform: translateY(-50%);
              margin-bottom: -60px;
              
@@ -46,6 +46,7 @@
     .form-wrapper{
         position: relative;
         padding-bottom: 100px;
+
     .background-wrapper{
         position: absolute;
         z-index: 1;
@@ -58,6 +59,7 @@
         background-size: 100% auto;
         bottom: 65px;
         left: 15px; 
+        
         @media (min-width: map-get($breakpoints,sm)) {
             bottom: 40px;
             left: 30px;
@@ -77,8 +79,7 @@
         background-repeat: no-repeat;
         background-position: bottom center;
         background-size: 100% auto;
-        padding: 30px;
-        padding-bottom: 30px;
+        padding: 30px 30px 60px;
         textarea{
             border: none;
             background: none;
@@ -95,4 +96,19 @@
     }
     
 
+}
+
+.content-filter{
+    .uk-search{
+        width: 100%;
+    }
+    .uk-form-blank{
+        width: 100%;
+
+        &:focus, &:active{
+            border: none;
+            border-bottom: 1px solid $light-grey;
+            background:none;
+        }
+    }
 }

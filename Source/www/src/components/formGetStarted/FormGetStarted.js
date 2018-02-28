@@ -53,14 +53,14 @@ class FormGetStarted extends Component {
                     <form>
                         <div className="uk-margin-small">
                             <div className="uk-inline uk-width-1-1">
-                                <span className="uk-form-icon" uk-icon="icon: user"></span>
+                                <span className="uk-form-icon" data-uk-icon="icon: user"></span>
                                 <input placeholder="email" className="uk-input uk-form-blank" type="text"/>
                             </div>
                         </div>
 
                         <div className="uk-margin-small">
                             <div className="uk-inline uk-width-1-1">
-                                <span className="uk-form-icon" uk-icon="icon: lock"></span>
+                                <span className="uk-form-icon" data-uk-icon="icon: lock"></span>
                                 <input placeholder="password" className="uk-input uk-form-blank" type="password"/>
                             </div>
                         </div>
