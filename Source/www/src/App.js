@@ -3,9 +3,11 @@ import './App.scss';
 
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {Provider} from 'react-redux';
+import store from './Store';
+
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
-// import store from './Store';
 import Header from './components/header/Header';
 import Home from './routes/home/Home';
 import Wall from './routes/wall/Wall';
@@ -19,6 +21,7 @@ UIkit.use(Icons);
 class App extends Component {
   render() {
     return (
+      <Provider store={store} >
       <Router>
       <div className="App">
         <Header/>
@@ -33,6 +36,7 @@ class App extends Component {
       </div>
       </div>
       </Router>
+      </Provider>
     );
   }
 }

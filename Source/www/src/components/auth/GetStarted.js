@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './FormGetStarted.scss';
-class FormGetStarted extends Component {
+import './GetStarted.scss';
+class GetStarted extends Component {
   render() {
     return (
      <div className="form-get-started">
@@ -80,5 +80,5 @@ class FormGetStarted extends Component {
   }
 }
 
-export default FormGetStarted;
+export default GetStarted;
 

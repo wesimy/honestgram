@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './FormPost.scss';
 
-class FormPost extends Component {
+class PostAdd extends Component {
     render(){
        return(
         <div className="content-form-post uk-flex-center uk-grid-collapse" data-uk-grid>
@@ -21,4 +21,4 @@ class FormPost extends Component {
        );
     }
 }
-    export default FormPost;
+    export default PostAdd;

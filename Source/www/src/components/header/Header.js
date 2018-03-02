@@ -12,7 +12,7 @@ class Header extends Component {
                 <nav className="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-sticky="sel-target: .page-content; cls-active: uk-navbar-sticky; top: 200;animation: uk-animation-slide-top;">
                     <div className="uk-navbar-left">
                         <div className="brand">
-                        <NavLink to="/" ><h1 title="honestgram" data-uk-slideshow-parallax="y: -60,60">honestgram<img src={logo} alt="honestgram logo" /></h1></NavLink>
+                        <NavLink to="/dashboard" ><h1 title="honestgram" data-uk-slideshow-parallax="y: -60,60">honestgram<img src={logo} alt="honestgram logo" /></h1></NavLink>
                         </div>
                     </div>
                     <div className="uk-navbar-right">

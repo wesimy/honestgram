@@ -4,9 +4,9 @@ import textarea from '../../assets/images/textarea.svg';
 
 import Profile from '../../components/profile/Profile';
 import Cover from '../../components/cover/Cover';
-import FormPost from '../../components/formPost/FormPost';
-import PostFilter from '../../components/postFilter/PostFilter';
-import PostList from '../../components/postList/PostList';
+import PostAdd from '../../components/post/PostAdd';
+import PostFilter from '../../components/post/PostFilter';
+import PostList from '../../components/post/PostList';
 
 class Wall extends Component {
     render() {
@@ -18,7 +18,7 @@ class Wall extends Component {
                     <div className="uk-container">
                         <Profile/>
                         
-                        <FormPost/>
+                        <PostAdd/>
                         
                         <PostList/>
 

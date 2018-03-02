@@ -1,10 +1,7 @@
 @import '../../theme/_index.scss';
 .app-header {
-    //border: 1px solid red;
-    //position: relative;
-    z-index: 10; //position: fixed;
-    //top: 0;
-    //width: 100%;
+   
+    z-index: 10;
     .uk-navbar-sticky {
         background: white;
         .uk-iconnav {
@@ -14,9 +11,12 @@
         }
     }
     .brand {
-        margin: 30px;
+        margin: 30px 15px;
         h1 {
             color: $primary;
+        }
+        @media (min-width: map-get($breakpoints,md)) {
+            margin: 30px;
         }
     }
     .uk-iconnav {

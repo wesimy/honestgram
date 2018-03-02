@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
 import './Post.scss';
+import React, { Component } from 'react';
+//import {connect} from 'react-redux';
+//import * from '../../Actions';
+//import {bindActionCreators} from 'redux';
 
 class Post extends Component {
     render(){
@@ -32,4 +35,18 @@ class Post extends Component {
     };
 }
 
+// function mapStateToProps(state){
+//     // return {
+//     //     books: state.books.books,
+//     //     cart: state.cart.cart,
+//     // }
+//     return {}
+// }
+ 
+// function mapDispatchToProps(dispatch){
+//     //return bindActionCreators({addToCart,updateCart},dispatch);
+// }
+
+//export default connect(mapStateToProps,mapDispatchToProps)(Post);
 export default Post;
+
