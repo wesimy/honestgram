@@ -1,6 +1,5 @@
 import './PostList.scss';
 import React, { Component } from 'react';
-import store from '../../Store';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { getPosts } from '../../Actions';
@@ -9,31 +8,48 @@ import Post from '../post/Post';
 class PostList extends Component {
     constructor(){
         super();
-        //store.dispatch(getBooks());
     }
+
     componentDidMount(){
-        let p = {
-            Id: 1,
-            Date: '12APR',
-            Author: null,
-            AuthorSecretID: 123,
-            Content:'some post content',
-            Private: false,
-            }
-            
+        let p = [
+            {
+                _id: 1,
+                wall: 1,
+                date: '12APR',
+                author: null,
+                authorSecretID: 123,
+                content:'some post content',
+                isPrivate: false,
+                avatar: 'https://getuikit.com/docs/images/avatar.jpg',
+                
+                },
+                {
+                    _id: 2,
+                    wall: 1,
+                    date: '12APR',
+                    author: 'moataz',
+                    authorSecretID: 1234,
+                    content:'some post content 2',
+                    isPrivate: false,
+                    avatar: 'https://getuikit.com/docs/images/avatar.jpg',
+                    }
+        ]
             
         const ps = this.props.getPosts(p);
-        console.log(ps);
     }
     render(){
+        const postList = this.props.posts.map(function(postsArr){
+            return(
+                <li key={postsArr._id} >
+                <Post post={postsArr} />
+                </li>
+                
+            )
+        })
+
         return( <div className="content-list uk-flex-center uk-grid-collapse" data-uk-grid>
         <ul className="uk-child-expand@s uk-width-4-5@m uk-width-3-5@l uk-comment-list">
-            <li><Post/></li>
-            <li><Post/></li>
-            <li><Post/></li>
-            <li><Post/></li>
-            <li><Post/></li>
-            <li><Post/></li>
+            {postList}
         </ul>
     </div>);
     };

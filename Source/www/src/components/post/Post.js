@@ -10,11 +10,11 @@ class Post extends Component {
         <header className="uk-comment-header uk-position-relative">
             <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
                 <div className="uk-width-auto">
-                    <img className="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="" />
+                    <img className="uk-comment-avatar" src={this.props.post.avatar} width="80" height="80" alt="" />
                 </div>
                 <div className="uk-width-expand">
-                    <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
-                    <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
+                    <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">{(this.props.post.author)? this.props.post.author: 'Anonymous'}</a></h4>
+                    <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">{this.props.post.date}</a></p>
                 </div>
             </div>
             <div className="uk-position-top-right ">
@@ -29,7 +29,7 @@ class Post extends Component {
             </div>
         </header>
         <div className="uk-comment-body">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>{this.props.post.content}</p>
         </div>
     </article>);
     };
