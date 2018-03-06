@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import FormSettings from '../../components/formSettings/FormSettings';
-import './Settings.scss';
+import Settings from '../../components/settings/Settings';
+import './Account.scss';
 
-class Settings extends Component {
+class Account extends Component {
     render() {
         return (
             <div className="app-page">
@@ -10,7 +10,7 @@ class Settings extends Component {
                 <div className="page-content">
                     <div className="uk-container">
 
-                        <FormSettings/>
+                        <Settings/>
                     
                     </div>
                 </div>
@@ -18,4 +18,4 @@ class Settings extends Component {
         );
     }
 }
-export default Settings;
+export default Account;

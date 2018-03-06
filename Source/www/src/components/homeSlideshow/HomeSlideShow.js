@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TypeIt from 'typeit';
-import GetStarted from '../auth/GetStarted';
+import GetStarted from '../account/GetStarted';
 import * as Spread from '../../components/spread/Spread';
 
 import UIkit from 'uikit';
@@ -26,8 +26,8 @@ import origramiGoogle from '../../assets/images/G.png';
 import origramiTwitter from '../../assets/images/Twitter.png';
 
 class HomeSlideShow extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = { currentSlide: 0, sliding: false, subslides: false };
     }
     componentDidMount() {
@@ -154,7 +154,7 @@ class HomeSlideShow extends Component {
                                 <p data-uk-slideshow-parallax="y: -50,50">speak your mind, stop the gossips</p>
                                 <div className="uk-flex-center uk-grid-collapse" data-uk-grid>
                                     <div className="uk-width-1-1 uk-width-1-3@m uk-width-1-4@xl">
-                                        <GetStarted />
+                                        <GetStarted history={this.props.history}/>
                                     </div>
                                 </div>
                             </div>

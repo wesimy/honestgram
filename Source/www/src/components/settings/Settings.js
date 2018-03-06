@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './FormSettings.scss'; 
+import './Settings.scss'; 
 
-class FormSettings extends Component {
+class Settings extends Component {
     render(){
         return(<div className="content-settings uk-flex-center uk-grid-collapse uk-margin-large" data-uk-grid>
         <div className="uk-child-expand@s uk-width-4-5@m uk-width-3-5@l uk-box-shadow-small">
@@ -92,4 +92,4 @@ class FormSettings extends Component {
     };
 }
 
-export default FormSettings;
+export default Settings;

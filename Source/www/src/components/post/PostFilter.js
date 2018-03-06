@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-// import './FormSearch.scss';
+import './Post.scss';
 
 class FormSearch extends Component {
     render(){

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './FormPost.scss';
+import './Post.scss';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { addPost } from '../../Actions';
@@ -8,7 +8,8 @@ class PostAdd extends Component {
         super();
     }
 
-    handleSubmit(){
+    onAddPostSubmit(event){
+        event.preventDefault();
         let p = {
             _id: 4,
             wall: 1,
@@ -27,12 +28,11 @@ class PostAdd extends Component {
         <div className="uk-child-expand@s uk-width-4-5@m uk-width-3-5@l">
             <div className="form-wrapper">
 
-                <form>
-
-                    <textarea className="uk-textarea" placeholder="speak your heart" ref="content" ></textarea>
-                    <a className="uk-button uk-button uk-button-third" onClick={this.handleSubmit.bind(this)}>Post</a>
+                <form onSubmit={this.onAddPostSubmit.bind(this)}>
+                <textarea className="uk-textarea" placeholder="speak your heart" ref="content" ></textarea>
+                    <button className="uk-button uk-button uk-button-third" type="submit">Post</button>
+            
                 </form>
-
                 <div className="background-wrapper"></div>
             </div>
         </div>
