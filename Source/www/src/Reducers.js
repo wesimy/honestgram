@@ -2,10 +2,14 @@
 
 import {combineReducers} from 'redux';
 import {postReducers} from './components/post/Reducers';
-//import {cartReducers} from './widgets/cart/cartReducers';
+import sessionReducer from './components/session/Reducers';
+//import userReducer from './components/user/Reducers';
+
+
 
 export default combineReducers({
    posts: postReducers,
-//cart: cartReducers,
+   session: sessionReducer,
+  // userState: userReducer,
 });
 

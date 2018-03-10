@@ -3,7 +3,20 @@ import Profile from '../../components/profile/Profile';
 import Cover from '../../components/cover/Cover';
 import PostFilter from '../../components/post/PostFilter';
 import PostList from '../../components/post/PostList';
+import {connect} from 'react-redux';
+
 class Dashboard extends Component {
+    constructor(props){
+        super(props);
+       // console.log(props);
+    }
+    componentWillMount(){
+        //this.props.onSetAuthUser();
+        // if(!this.props.session.user){
+        //     console.log(this.props.session);
+        //     this.props.history.push('/');
+        // }
+    }
     render() {
         return (
             <div className="app-page ">
@@ -20,4 +33,9 @@ class Dashboard extends Component {
         );
     }
 }
-export default Dashboard;
+function mapStateToProps(state) {
+  return{
+    session: state.session
+  }
+}
+export default connect(mapStateToProps)(Dashboard);
