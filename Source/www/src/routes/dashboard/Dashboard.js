@@ -4,13 +4,18 @@ import Cover from '../../components/cover/Cover';
 import PostFilter from '../../components/post/PostFilter';
 import PostList from '../../components/post/PostList';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {compose} from 'recompose';
+import withAuthentication from '../../components/session/withAuthentication';
+import { withRouter } from 'react-router'
 
 class Dashboard extends Component {
     constructor(props){
         super(props);
        // console.log(props);
     }
-    componentWillMount(){
+    componentDidMount(){
+        console.log(this.props);
         //this.props.onSetAuthUser();
         // if(!this.props.session.user){
         //     console.log(this.props.session);
@@ -33,9 +38,17 @@ class Dashboard extends Component {
         );
     }
 }
-function mapStateToProps(state) {
-  return{
-    session: state.session
-  }
-}
-export default connect(mapStateToProps)(Dashboard);
+
+// function mapStateToProps(state) {
+//     return{
+//       session: state.session
+//     }
+//   }
+
+export default compose(
+    withAuthentication,
+    withRouter,
+    //connect(mapStateToProps),
+)(Dashboard);
+
+//export default connect(mapStateToProps)(Dashboard);

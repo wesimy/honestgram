@@ -27,8 +27,8 @@ class GetStarted extends Component {
             this.setState({
                 signinerror: null
             });
-            this.props.history.push(routes.HOME);
-            console.log(this.props)
+            //this.props.history.push(routes.HOME);
+            //console.log(this.props)
         })
         .catch(error => {
           console.log(error);
@@ -151,7 +151,7 @@ function mapDispatchToProps(dispatch){
   
 function mapStateToProps(state) {
   return{
-      user: state.user
+      session: state.session
   }
 }
 

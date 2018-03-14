@@ -154,7 +154,7 @@ class HomeSlideShow extends Component {
                                 <p data-uk-slideshow-parallax="y: -50,50">speak your mind, stop the gossips</p>
                                 <div className="uk-flex-center uk-grid-collapse" data-uk-grid>
                                     <div className="uk-width-1-1 uk-width-1-3@m uk-width-1-4@xl">
-                                        <GetStarted history={this.props.history}/>
+                                        <GetStarted/>
                                     </div>
                                 </div>
                             </div>
